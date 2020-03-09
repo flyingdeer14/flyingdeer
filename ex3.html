@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Conditional statements</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+      <div id="article">
+        <p>
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if (this.value==='night') {
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            this.value='day';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+              console.log(alist[i]);
+              alist[i].style.color = 'powderblue';
+              i=i+1;
+            }
+        }  else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value='night';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'blue';
+                i=i+1;
+            }
+        } ">
+        </p>
+        <h2>JavaScript</h2>
+        <h3>Conditional statements</h3>
+        <h4>Program</h4>
+        <script>
+        document.write("1<br>");
+        document.write("2<br>");
+        document.write("3<br>");
+        document.write("4<br>");
+        </script>
+        <h4>If-true</h4>
+        <script>
+        document.write("1<br>");
+        if(true){
+          document.write("2<br>");
+        } else{
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+        </script>
+        <h4>If-false</h4>
+        <script>
+        document.write("1<br>");
+        if(false){
+          document.write("2<br>");
+        } else{
+          document.write("3<br>");
+        }
+        document.write("4<br>");
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
