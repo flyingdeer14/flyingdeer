@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Function</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function nightdayHandler(self){
+      var target = document.querySelector('body');
+      if (self.value==='night') {
+          target.style.backgroundColor='black';
+          target.style.color='white';
+          self.value='day';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+            console.log(alist[i]);
+            alist[i].style.color = 'powderblue';
+            i=i+1;
+          }
+        }  else {
+          target.style.backgroundColor='white';
+          target.style.color='black';
+          self.value='night';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+              console.log(alist[i]);
+              alist[i].style.color = 'blue';
+              i=i+1;
+            }
+          }
+        }
+    </script>
+  </head>
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+      <div id="article">
+        <p>
+        <input type="button" value="night" onclick="nightdayHandler(this);">
+        </p>
+        <h2>JavaScript</h2>
+        <h3>Function</h3>
+        <h4>Basic</h4>
+        <ul>
+          <script>
+            function two(){
+            document.write("<li>2-1</li>");
+            document.write("<li>2-2</li>");
+            }
+            document.write("<li>1</li>");
+            two();
+            document.write("<li>3</li>");
+            two();
+        </script>
+        </ul>
+        <h4>Parameter & Argument</h4>
+        <script>
+          function onePlusone(){
+            document.write(1+1+'<br>');
+          }
+          onePlusone();
+          function sum(left, right){
+            document.write(left+right+'<br>');
+          }
+          function sumColorRed(left, right){
+            document.write('<div style="color:red">'+(left+right)+'</div>');
+          }
+          sum(2,3);
+          sumColorRed(2,3);
+          sum(3,4);
+        </script>
+        <h4>Return</h4>
+        <script>
+          function sum2(left, right){
+            return left+right;
+          }
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+        document.write('<div style="font-size:3rem;">'+sum2(2,3)+'</div>');
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

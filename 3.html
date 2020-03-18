@@ -4,6 +4,36 @@
   <meta charset="utf-8">
   <title>WEB - javascript</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+  function nightdayHandler(self){
+    var target = document.querySelector('body');
+    if (self.value==='night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        self.value='day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          console.log(alist[i]);
+          alist[i].style.color = 'powderblue';
+          i=i+1;
+        }
+      }  else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        self.value='night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            console.log(alist[i]);
+            alist[i].style.color = 'blue';
+            i=i+1;
+          }
+        }
+      }
+  </script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
@@ -15,40 +45,17 @@
     </ol>
     <div id="article">
       <p>
-      <input type="button" value="night" onclick="
-      var target = document.querySelector('body');
-      if (this.value==='night') {
-          target.style.backgroundColor='black';
-          target.style.color='white';
-          this.value='day';
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i < alist.length){
-            console.log(alist[i]);
-            alist[i].style.color = 'powderblue';
-            i=i+1;
-          }
-      }  else {
-          target.style.backgroundColor='white';
-          target.style.color='black';
-          this.value='night';
-          var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i < alist.length){
-              console.log(alist[i]);
-              alist[i].style.color = 'blue';
-              i=i+1;
-          }
-      } ">
+      <input type="button" value="night" onclick="nightdayHandler(this);">
       </p>
       <h2>JavaScript</h2>
       <ul>
-        <li><a href="ex1.html">Button</a></li>
-        <li><a href="ex2.html">Comparison operator & Boolean</a></li>
-        <li><a href="ex3.html">Conditional statements</a></li>
-        <li><a href="ex4.html">Array</a></li>
-        <li><a href="ex5.html">Loop</a></li>
-        <li><a href="ex6.html">Loop & Array</a></li>
+        <li><a href="button.html">Button</a></li>
+        <li><a href="Comparison operator & Boolean">Comparison operator & Boolean</a></li>
+        <li><a href="Conditional statements.html">Conditional statements</a></li>
+        <li><a href="array.html">Array</a></li>
+        <li><a href="loop.html">Loop</a></li>
+        <li><a href="loop array.html">Loop & Array</a></li>
+        <li><a href="function.html">Function</a></li>
       </ul>
     </div>
   </div>
